@@ -14,7 +14,7 @@ def review(config):
         descr_message = descr_message.replace("${COMMITS_BEHIND_LIMIT}", str(commits_behind_limit))
 
         comment = commons.comment_create(
-            comment_id=commons.comment_generate_id(descr_message),
+            comment_id=commons.comment_generate_id(descr_message), # TODO QUANDO NO MESMO MERGE REPETE A MESMA QUANTIDADE DE COMMIT NAO COMENTA, ADICIONAR ALGO NO ID, COMO OS HASH DO COMMIT
             comment_description=descr_message,
             comment_path=None,
             comment_snipset=False,
